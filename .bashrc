@@ -14,12 +14,6 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 # prompt
-if [ "x$YROOT_NAME" != "x" ]; then
-    PS1_HOST="\h:$YROOT_NAME"
-else
-    PS1_HOST="\h"
-fi
-
 if [ -f ~/.git-prompt.sh ]; then
     . ~/.git-prompt.sh
     export PS1="[$PS1_HOST \W]\$(__git_ps1 '[%s]')\\$ "
